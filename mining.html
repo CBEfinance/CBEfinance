@@ -1,0 +1,293 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>CBE</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="enroutedigitallab">
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"><![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Google Font -->
+
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i%7CRoboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+    <link rel="shortcut icon" href="images/icon/logo.ico">
+    <!-- Bootstrap css-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Font Awesome css-->
+    <!--<link rel="stylesheet" href="css/font-awesome.min.css">-->
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    <!-- animate css-->
+    <link rel="stylesheet" href="css/animate.min.css">
+    <!-- REVOLUTION SLIDER STYLES -->
+    <link rel="stylesheet" type="text/css" href="css/settings.css">
+    <link rel="stylesheet" type="text/css" href="css/layers.css">
+    <link rel="stylesheet" type="text/css" href="css/navigation.css">
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <!-- custom menu css-->
+    <link rel="stylesheet" href="css/custom-menu.css">
+    <!-- Style css-->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Responsive css-->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Modernizr js-->
+    <script src="js/modernizr-2.8.3.min.js"></script>
+</head>
+<body>
+
+    <!--Preloader-->
+    <div class="preloader">
+        <div class="loading"></div>
+    </div><!--/.preloader-->
+
+    <!--header-->
+    <header class="stricky">
+        <div class="input-search-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <form id="contact" action="#">
+                            <div class="search-input pr">
+                                <input type="text" name="name" placeholder="Search Here....." class="form-control" required="">
+                                <button type="submit" class="submit-btn"><i class="ion-search"></i></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="close-button">
+                    <i class="ion-ios-close-outline"></i>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <nav id="cssmenu">
+                        <div class="logo">
+                            <a href="index.html"><img src="images/logo.png" alt=""></a>
+                        </div>
+                        <div id="head-mobile"></div>
+                        <div class="button"></div>
+                        <ul class="pull-right header-list">
+                            <li><a href="index.html">首页</a></li>
+                            <li><a href="mining.html">挖矿</a></li>
+                            <li><a href="invited.html">我的邀请</a></li>
+                            <li><a style="color: #222;" href="javascript:void(0)" id="connect" class="cryptod-button-warning">链接钱包</a></li>
+                        </ul><!--/.pull-right-->
+                    </nav><!--/#cssmenu-->
+                </div>
+            </div>
+        </div>
+        <div id="error" style="text-align: center; color: red; font-weight: bold;"></div>
+    </header><!--/header-->
+
+    <div id="counter" class="counter-section section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5 col-sm-12">
+                    <div class="achivement">
+                        <h2>当前<span>CBE</span>数据</h2>
+                    </div><!--/.achivement-->
+                </div>
+                <div class="col-md-7">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                            <div class="counter-up">
+                               
+                                <h4><span style="color: yellow; font-size: 30px;" id="minterAmount">0</span><br><br>全网矿工数</h4>
+                            </div><!--/.counter-up-->
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                            <div class="counter-up">
+                                <h4><span style="color: yellow; font-size: 30px;" id="invitedAccontAmount">0</span><br><br>我的邀请人数</h4>
+                            </div><!--/.counter-up-->
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                            <div class="counter-up">
+                                <h4><span style="color: yellow; font-size: 30px;" id="myPowerValue">0</span><br><br>我的算力值</h4>
+                            </div><!--/.counter-up-->
+                        </div>
+                    </div>
+                </div>
+            </div><!--/.row-->
+        </div><!--/.container-->
+    </div><!--/#counter-->
+
+    <div class="contact-form bg-white">
+        <form>
+            <div class="input-head">
+                <h4><a href="">我的推荐人：</a></h4>
+            </div>
+            <div class="input-field">
+                <div class="single-input">
+                    <input type="text" name="name" placeholder="请输入您的推荐人邀请地址" id="inviterAddress" class="form-control" required/>
+                </div>
+            </div>
+            <href class="cryptod-button-warning" id="activateAccountButton">激活</href>
+
+            <div class="input-head">
+                <h4><a href="">我的邀请码：</a></h4>
+            </div>
+            <div class="input-field">
+                <div class="single-input">
+                    <input type="text" name="name" placeholder="请先参与挖矿" class="form-control" href="javascript:void(0)" id="inviteLink" required/>
+                </div>   
+            </div>
+        </form>
+        <button class="cryptod-button-warning" id="copyInviteAddress">复制</button>
+    </div><!--/.comment-form-->
+
+    <section class="bg-deep about-content-section">
+        <div class="container">
+            <div class="row row-eq-height">
+                <div class="col-md-6 col-sm-6">
+                    <div class="about-inner">
+                        <div class="image">
+                            <img class="img-responsive" src="images/blog/about-crypto1.png" >
+                        </div>
+                    </div><!--/.about-inner-->
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <div class="about-inner-text-content">
+                        <div>
+                            <h2><br>当前可提取的CBE代币数量：</h2>
+                        </div>
+                        <div class="about-inner">
+                            <p class="text" id="miningAmount" style="color: rgb(240, 158, 6); font-size: 40px;">0</p>
+                            <a class="cryptod-button-success" href="javascript:void(0)" id="withdrawMiningButton">提到钱包</a>
+                        </div>
+                    </div><!--/.about-inner-text-content-->
+                </div>
+            </div><!--/.row-->
+        </div><!--/.container-->
+    </section><!--/.about-section-->
+    
+   
+
+    <section class="footer-area">
+        <div class="container">
+            <div class="row footer-banner row-eq-height">
+                <div class="col-md-4 col-sm-6">
+                    <div class="footer-content">
+                        <div class="footer-logo">
+                            <a href=""><img src="images/footer-logo.png" alt=""></a>
+                        </div>
+                        <div class="text-content">
+                            <p>CBE社区是完全自主化社区，我们需要一群志同道合的坚定信仰者和我们一起，将自主，平等，共存，和谐的社区理念传播出去。</p>
+                            <p>CBE是一场公平启动实验，不构成任何投资建议。</p>
+                        </div>
+                    </div><!--/.footer-content-->
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="footer-content">
+                        <h4><a href="">社群</a></h4>
+                        <ul>
+                            <li><a href="https://t.me/CBE_Group_cn">Telegram：CBE_Group_cn</a></li>
+                            <li><a href="https://github.com/CBEfinance/CBE">Github:github.com/CBEfinance/CBE</a></li>
+                            <li><a href="https://twitter.com/CbeFinance">Twitter:twitter.com/CbeFinance</a></li>
+                        </ul>
+                    </div><!--/.footer-content-->
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-6">
+                    <div class="footer-content">
+                        <h4><a href="">链接</a></h4>
+                        <ul>
+                            <li><a href="">Pancake</a></li>
+                            <li><a href="">BSC</a></li>
+            
+                        </ul>
+                    </div><!--/.footer-content-->
+                </div>
+                <div class="col-md-2 col-sm-6 col-xs-6">
+                    <div class="footer-content">
+                        <h4><a href="">关于</a></h4>
+                        <ul>
+                            <li><a href="index.html">首页</a></li>
+                            <li><a href="mining.html">挖矿</a></li>
+                            <li><a href="invited.html">邀请记录</a></li>
+                        </ul>
+                    </div><!--/.footer-content-->
+                </div>
+            </div><!--/.rwo footer-banner-->
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                        <div class="copyright-info">
+                            <p>版权所有 &copy; 2022.CBE保留所有权利.</p>
+                        </div>
+                    </div><!--/.copyright-info-->
+                    
+                </div>
+            </div><!--/.copyright-->
+        </div><!--/.contianer-->
+    </section><!--/.footer area-->
+    <!--Preloader-->
+    <!-- == jQuery Librery == -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <!-- == Bootsrap js File == -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- == wow min js == -->
+    <script src="js/wow.min.js"></script>
+    <!-- == Custom Menu js == -->
+    <script src="js/custom-menu.js"></script>
+    <!-- == Custom Counter js == -->
+    <script src="js/custom-counter.js"></script>
+    <script src="js/prallex.js"></script>
+    <!-- == Owl Carousel  == -->
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/Chart.min.js"></script>
+    <!-- == Custom js  == -->
+   <script src="js/custom.js"></script>
+   <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js" type="application/javascript"></script>
+   <script src="js/wallet.js"></script>
+    <script>
+
+        var canvas = document.getElementById('myChart');
+
+        var data = {
+            labels: ["Saturday", "Sunday", "Mon", "Tues", "Wednes", "Thurs", "Friday"],
+            datasets: [
+                {
+                    label: "Business Goal Statistics",
+                    backgroundColor: "rgba(255,206,0,1)",
+                    borderColor: "rgba(255,206,0,1)",
+                    borderWidth: 2,
+                    hoverBackgroundColor: "rgba(255,206,0,1)",
+                    hoverBorderColor: "rgba(255,206,0,1)",
+                    data: [5, 7, 4, 8, 6, 5, 4],
+                },
+            ]
+        };
+        var option = {
+            scales: {
+                yAxes:[{
+                	ticks:{
+                		max: 10,
+                		stepSize: 1
+                	},
+                    stacked:true,
+                    gridLines: {
+       					borderDash: 8,
+                        stroke: true
+                    }
+                }],
+                xAxes:[{
+               		 stacked:true,
+                    gridLines: {
+                        display:true,
+                    }
+                }]
+            }
+        };
+
+        var myBarChart = Chart.Bar(canvas,{
+            data:data,
+            options:option
+        });
+    </script>
+</body>
+</html>
+
