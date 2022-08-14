@@ -502,8 +502,8 @@ const tokenAbi = [
     }
 ];
 
-const tokenAddress = '0x3F1b55a1425A3dec6dB97cf5d31Cc06287f8A1C6';
-const zeroAddress = '0x0000000000000000000000000000000000000000';
+const tokenAddress = '0x80D33aB92f4Ed84c73641fa56dB4489AC83370c4';
+const zeroAddress = '';
 
 const connectButton = document.getElementById('connect');
 
@@ -554,7 +554,10 @@ window.addEventListener('load', async function() {
 
     if (isInMiningPage()) {
         inviteLinkInput.value = generateInviteLink(currentAccount);
+
         inviterInput.value = inviterAddress;
+        inviterInput.placeholder = '请输入邀请人地址';
+        
         activateAccountButton.onclick = activateAccount;
         copyInviteAddressButton.onclick = copyTestToClipboard;
         withdrawMiningButton.onclick = withdrawMining;
@@ -637,7 +640,7 @@ const copyTestToClipboard = async () => {
 }
 
 const generateInviteLink = (address) => {
-    return "http://eooshi.com/mining.html?inviter=" + address
+    return "http://cbefinance.com/mining.html?inviter=" + address
 }
 
 const setExceptionErrorMessage = (exception) => {
@@ -662,7 +665,7 @@ const isAccountActivated = async (address) => {
 
 const activateAccount = async () => {
     errorInfo.innerText = '';
-    activateAccountButton.value = '激活中...';
+    activateAccountButton.innerText = '激活中...';
 
     if (inviterInput.value.length == 0) {
         errorInfo.innerText = '邀请人地址不能为空';
@@ -672,14 +675,14 @@ const activateAccount = async () => {
         const transaction = await contractInstance.activateAccount(inviterInput.value, { from: currentAccount, value: ethers.utils.parseUnits("0.005") });
         const recipient = await transaction.wait();
         if (recipient.status == 1) {
-            activateAccountButton.value = '激活成功';
+            activateAccountButton.innerText = '激活成功';
             await refreshMiningPageData();
         } else {
-            activateAccountButton.value = '激活失败';
+            activateAccountButton.innerText = '激活失败';
         }
     } catch (e) {
         setExceptionErrorMessage(e);
-        activateAccountButton.value = '激活失败';
+        activateAccountButton.innerText = '激活失败';
     }
 }
 
