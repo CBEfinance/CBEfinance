@@ -689,7 +689,7 @@ const activateAccount = async () => {
 const getMinterCount = async () => {
     errorInfo.innerText = '';
     const amount = await contractInstance.getMinterCount();
-    return 1680 + amount;
+    return 1680 + parseInt(amount);
 }
 
 const getInvitedAccountCount = async () => {
